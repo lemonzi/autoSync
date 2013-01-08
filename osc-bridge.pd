@@ -1,0 +1,53 @@
+#N canvas 675 236 411 263 10;
+#X declare -lib mrpeach;
+#X obj 136 17 import mrpeach;
+#X obj -23 166 udpsend;
+#X obj -69 123 packOSC;
+#X obj 163 74 loadbang;
+#X obj -163 64 udpreceive \$3;
+#X obj 171 144 tgl 12 0 \$0-onoff-snd \$0-onoff-rcv Link 15 7 0 10
+-262144 -33289 -33289 1 1;
+#X obj 46 17 sel 1 0;
+#X msg 92 80 disconnect;
+#X obj 105 111 cnv 15 90 16 empty empty \$1 0 0 0 12 -262144 -66577
+0;
+#X obj 105 119 cnv 15 90 20 empty empty \$2 0 12 0 12 -262144 -66577
+0;
+#X obj 105 137 cnv 15 40 20 empty empty \$3 0 12 0 12 -262144 -66577
+0;
+#X obj 27 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 96 207 color 0 12 12;
+#X msg 95 181 color 16 12 12;
+#X obj 30 181 delay 80;
+#X obj 25 52 list append \$2 \$3;
+#X msg -8 124 connect \$1 \$2;
+#X obj -163 116 s from-OSC-\$3;
+#X obj -163 155 r from-OSC-\$3;
+#X obj -163 89 unpackOSC;
+#X obj 27 234 s \$1-link;
+#X obj -69 34 spigot;
+#X obj -163 195 s from-OSC-\$1;
+#X obj -69 13 r to-OSC-\$1;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 4 0 19 0;
+#X connect 5 0 6 0;
+#X connect 5 0 21 1;
+#X connect 6 0 15 0;
+#X connect 6 1 7 0;
+#X connect 7 0 1 0;
+#X connect 11 0 13 0;
+#X connect 11 0 14 0;
+#X connect 11 0 20 0;
+#X connect 12 0 5 0;
+#X connect 13 0 5 0;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 1 0;
+#X connect 18 0 11 0;
+#X connect 18 0 22 0;
+#X connect 19 0 17 0;
+#X connect 21 0 2 0;
+#X connect 23 0 21 0;
+#X coords 0 -1 1 1 115 60 2 100 100;

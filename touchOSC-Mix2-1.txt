@@ -1,0 +1,17 @@
+1-rotary1 /1/rotary1
+1-rotary2 /1/rotary2
+1-rotary3 /1/rotary3
+1-rotary4 /1/rotary4
+1-rotary5 /1/rotary5
+1-rotary6 /1/rotary6
+1-fader1 /1/fader1
+1-fader2 /1/fader2
+1-fader3 /1/fader3
+1-toggle1 /1/toggle1
+1-toggle2 /1/toggle2
+1-toggle3 /1/toggle3
+1-toggle4 /1/toggle4
+1-push1 /1/push1
+1-push2 /1/push2
+1-push3 /1/push3
+1-push4 /1/push4

@@ -1,0 +1,13 @@
+3-fader1 /3/fader1
+3-fader2 /3/fader2
+3-fader3 /3/fader3
+3-fader4 /3/fader4
+3-fader5 /3/fader5
+3-toggle1 /3/toggle1
+3-toggle2 /3/toggle2
+3-toggle3 /3/toggle3
+3-rotary1 /3/rotary1
+3-push1 /3/push1
+3-push2 /3/push2
+3-push3 /3/push3
+3-push4 /3/push4

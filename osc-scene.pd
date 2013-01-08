@@ -1,0 +1,39 @@
+#N canvas 453 278 511 360 10;
+#X obj 130 186 textfile;
+#X obj 136 25 loadbang;
+#X obj 348 189 namecanvas \$0-scene;
+#X obj 232 101 \$0;
+#X obj 129 111 symbol \$1;
+#X msg 72 111 rewind;
+#X msg 30 112 bang;
+#X obj 82 222 spigot;
+#X obj 136 50 t b b b b b;
+#X msg 206 211 1;
+#X obj 49 197 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 176 211 0;
+#X msg 129 148 read \$1 cr;
+#X msg 232 124 \; \$1-scene obj 250 180 pd \$1-bridges \; pd-\$1-bridges
+vis 0;
+#X obj 130 250 prepend \$0 \$2;
+#X msg 130 292 \; pd-\$1-bridges obj 100 100 osc-trans \$3 \$4 \$2
+;
+#X connect 0 0 7 0;
+#X connect 0 0 14 0;
+#X connect 0 1 11 0;
+#X connect 1 0 8 0;
+#X connect 3 0 13 0;
+#X connect 4 0 12 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 10 0;
+#X connect 8 0 6 0;
+#X connect 8 1 5 0;
+#X connect 8 2 4 0;
+#X connect 8 3 9 0;
+#X connect 8 4 3 0;
+#X connect 9 0 7 1;
+#X connect 10 0 0 0;
+#X connect 11 0 7 1;
+#X connect 12 0 0 0;
+#X connect 14 0 15 0;

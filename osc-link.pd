@@ -1,0 +1,14 @@
+#N canvas 1187 478 245 132 10;
+#X obj 16 93 outlet;
+#X obj 132 11 inlet;
+#X obj 132 36 prepend /\$1/data;
+#X obj 16 36 routeOSC /\$1;
+#X obj 16 63 routeOSC /data;
+#X obj 16 11 r from-OSC;
+#X obj 132 62 s to-OSC;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 3 0;
+#X coords 0 0 1 1 135 17 0;

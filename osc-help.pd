@@ -1,0 +1,58 @@
+#N canvas 416 221 542 664 10;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X obj 21 307 osc-nbr foo;
+#X obj 174 219 osc-hradio foo;
+#X obj 427 189 osc-vsl foo;
+#X obj 13 80 osc-link foo;
+#X obj 22 220 osc-bng foo;
+#X obj 390 202 osc-vradio foo;
+#X obj 174 270 osc-hsl foo;
+#X obj 22 261 osc-tgl foo;
+#X obj 5 -96 osc-server loopback localhost 1234;
+#X obj 19 485 osc-config;
+#X text 128 -96 [osc-server] is the linker between the 2 computers.
+;
+#X text 130 -80 Arguments: [osc-server name IP port];
+#X text 131 -63 If you want the objects to be linked internally build
+one connected to localhost \, like this one.;
+#X text 105 76 [osc-link] is the most basic linked object.;
+#X text 106 92 It's useful to send data such as lists \, but it's not
+suitable for linking GUI objects!;
+#X text 107 121 You can also use it to send data from audio analysis
+objects \, to get visual feedback.;
+#X text 16 172 All other objects come from the standard Pure Data library.
+;
+#X text 49 259 [osc-tgl];
+#X text 46 220 [osc-bng];
+#X text 262 290 [osc-hsl];
+#X text 423 327 [osc-vsl];
+#X text 233 237 [osc-hradio];
+#X text 344 327 [osc-vradio];
+#X text 93 307 [osc-nbr];
+#X obj 19 532 osc-hsl bar;
+#X text 326 482 This bang outputs default settings;
+#X text 327 498 for horitzontal sliders.;
+#X text 19 423 [osc-config] can tune some visual settings of the objects
+by connecting to them \, though that's not going to be saved.;
+#X text 10 -5 Linked objects: all the linked objects take a single
+argument which is their ID. All objects with the same ID will be linked
+\, and any data passing through them will get to the others.;
+#X text 19 457 If an object gets frozen try to move it.;
+#N canvas 376 326 449 225 scene 0;
+#X obj 291 62 osc-bridge touchOSC 192.168.0.102 8080;
+#X obj 122 29 osc-hsl 1-fader1;
+#X obj 122 54 osc-hsl 1-fader2;
+#X obj 123 80 osc-hsl 1-fader3;
+#X obj 123 134 osc-hsl 1-fader5;
+#X obj 124 107 osc-hsl 1-fader4;
+#X obj 30 44 osc-tgl 1-toggle1;
+#X obj 31 86 osc-tgl 1-toggle2;
+#X obj 31 129 osc-tgl 1-toggle3;
+#X obj 32 176 osc-tgl 1-toggle4;
+#X obj 135 176 osc-scene touchOSC-Simple-1.txt touchOSC;
+#X restore 28 370 pd scene;
+#X text 96 367 [osc-scene] maps osc routes to ID's as defined in a
+given text file. It's useful to link external controllers to the system.
+;
+#X connect 9 0 24 0;

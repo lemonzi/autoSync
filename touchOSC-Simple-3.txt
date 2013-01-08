@@ -1,0 +1,9 @@
+1-fader1 /1/fader1
+1-fader2 /1/fader2
+1-fader3 /1/fader3
+1-fader4 /1/fader4
+1-fader5 /1/fader5
+1-toggle1 /1/toggle1
+1-toggle2 /1/toggle2
+1-toggle3 /1/toggle3
+1-toggle4 /1/toggle4
